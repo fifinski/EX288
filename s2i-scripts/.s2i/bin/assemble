@@ -10,11 +10,11 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-
 DATE=`date "+%Y"`
 
-echo "Page date $DATE" >> ./info.html
-echo "Siema!" >> ./info.html
+cp /tmp/src/*.html ./
+
+echo "Siema, strona zrobiona w $DATE roku" >> info.html
 
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
